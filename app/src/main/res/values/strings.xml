@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Github User\'s</string>
+
+    <string name="share">Share</string>
+    <string name="name" tools:ignore="UnusedResources">Name %s</string>
+    <string name="username">Username</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="company">Company</string>
+    <string name="location">Location</string>
+    <string name="repository">Repository</string>
+    <string name="link">Link</string>
+    <string name="search">Search</string>
+    <string name="change_language_settings">Change Language Settings</string>
+    <string name="avatar">Avatar</string>
+</resources>
