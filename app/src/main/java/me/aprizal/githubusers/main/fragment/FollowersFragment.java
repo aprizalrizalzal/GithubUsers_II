@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import me.aprizal.githubusers.R;
 import me.aprizal.githubusers.adapter.OnItemClickCallback;
 import me.aprizal.githubusers.adapter.UsersAdapter;
 import me.aprizal.githubusers.databinding.FragmentFollowersBinding;
@@ -86,7 +87,7 @@ public class FollowersFragment extends Fragment  implements OnItemClickCallback 
 
     @Override
     public void onLinkClicked(UsersResponseItem usersResponseItem) {
-        Toast.makeText(requireActivity(), "Open user details in browser", Toast.LENGTH_SHORT).show();
+        Toast.makeText(requireActivity(), getString(R.string.open_browser), Toast.LENGTH_SHORT).show();
         String url = usersResponseItem.getHtmlUrl();
         Intent link = new Intent(Intent.ACTION_VIEW);
         link.setData(Uri.parse(url));

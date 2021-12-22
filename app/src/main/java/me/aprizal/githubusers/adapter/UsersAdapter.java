@@ -2,7 +2,6 @@ package me.aprizal.githubusers.adapter;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -36,8 +35,8 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder>{
     @NonNull
     @Override
     public UsersAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_row_users, parent,false);
-        return new ViewHolder(view);
+        ListRowUsersBinding binding = ListRowUsersBinding.inflate(LayoutInflater.from(parent.getContext()),parent, false);
+        return new ViewHolder(binding);
     }
 
     @Override
@@ -54,9 +53,10 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder>{
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final ListRowUsersBinding binding;
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            binding = ListRowUsersBinding.bind(itemView);
+        public ViewHolder(ListRowUsersBinding binding) {
+            super(binding.getRoot());
+
+            this.binding = binding;
         }
 
         public void bind(UsersResponseItem usersResponseItems) {

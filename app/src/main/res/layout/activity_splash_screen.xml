@@ -10,7 +10,7 @@
         android:layout_width="@dimen/dimen_icon"
         android:layout_height="@dimen/dimen_icon"
         android:layout_centerInParent="true"
-        tools:src="@mipmap/ic_launcher"
+        android:src="@mipmap/ic_launcher"
         android:contentDescription="@string/app_name" />
 
     <TextView

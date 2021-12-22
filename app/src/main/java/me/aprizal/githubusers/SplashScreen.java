@@ -1,5 +1,6 @@
 package me.aprizal.githubusers;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,16 +10,14 @@ import com.bumptech.glide.Glide;
 import me.aprizal.githubusers.databinding.ActivitySplashScreenBinding;
 import me.aprizal.githubusers.main.MainActivity;
 
+@SuppressLint("CustomSplashScreen")
 public class SplashScreen extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        me.aprizal.githubusers.databinding.ActivitySplashScreenBinding binding = ActivitySplashScreenBinding.inflate(getLayoutInflater());
+        ActivitySplashScreenBinding binding = ActivitySplashScreenBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        Glide.with(this).load(R.mipmap.ic_launcher).placeholder(R.mipmap.ic_launcher).into(binding.imgIcon);
-        binding.tvAppName.setText(R.string.app_name);
 
         Thread thread = new Thread(() -> {
             long splash = 1500;
